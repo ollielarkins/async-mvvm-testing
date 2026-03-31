@@ -1,0 +1,38 @@
+<UserControl x:Class="MyWpfApp.Views.SidebarView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Border Background="#F3F3F4">
+        <StackPanel Margin="10" VerticalAlignment="Stretch">
+
+            <TextBlock Text="menu"
+                       FontSize="18"
+                       FontWeight="Bold"
+                       Margin="0 0 0 20"/>
+
+            <Button Content="async long task test"
+                    Command="{Binding NavigateCommand}"
+                    CommandParameter="Dashboard"
+                    Margin="0 10"/>
+
+            <Button Content="mock db"
+                    Command="{Binding NavigateCommand}"
+                    CommandParameter="Tables"
+                    Margin="0 10"/>
+
+            <Button Content="query db"
+                    Command="{Binding NavigateCommand}"
+                    CommandParameter="Query"
+                    Margin="0 10"/>
+
+            <Button Content="syslogs"
+                    Command="{Binding NavigateCommand}"
+                    CommandParameter="Logs"
+                    Margin="0 10"/>
+
+
+
+        </StackPanel>
+    </Border>
+
+</UserControl>

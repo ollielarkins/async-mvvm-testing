@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "ritcIOBYDdY=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\OliverLarkins\\repos\\Learning\\JustEventsWPF\\MyWpfApp\\MyWpfApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\OliverLarkins\\.nuget\\packages\\communitytoolkit.mvvm\\8.4.2\\communitytoolkit.mvvm.8.4.2.nupkg.sha512"
+  ],
+  "logs": []
+}

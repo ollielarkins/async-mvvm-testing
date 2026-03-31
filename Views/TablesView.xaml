@@ -1,0 +1,15 @@
+<UserControl x:Class="MyWpfApp.Views.TablesView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Border Style="{StaticResource GlassCard}">
+        <StackPanel>
+
+            <TextBlock Text="table" FontSize="22"/>
+
+            <ListBox ItemsSource="{Binding Tables}"
+                     SelectedItem="{Binding SelectedTable}"/>
+
+        </StackPanel>
+    </Border>
+</UserControl>

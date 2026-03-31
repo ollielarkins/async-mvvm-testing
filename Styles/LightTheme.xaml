@@ -1,0 +1,71 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!-- CORE COLORS -->
+    <Color x:Key="AppBackgroundColor">DarkGray</Color>
+    <Color x:Key="AppForegroundColor">#111111</Color>
+    <Color x:Key="AppCardColor">#FFFFFF</Color>
+    <Color x:Key="AppBorderColor">#33000000</Color>
+    <Color x:Key="AccentColor">#007AFF</Color>
+
+    <!-- BRUSHES -->
+    <SolidColorBrush x:Key="AppBackground" Color="{StaticResource AppBackgroundColor}" />
+    <SolidColorBrush x:Key="AppForeground" Color="{StaticResource AppForegroundColor}" />
+    <SolidColorBrush x:Key="AppAccent" Color="{StaticResource AccentColor}" />
+    <SolidColorBrush x:Key="CardBackground" Color="{StaticResource AppCardColor}" />
+    <SolidColorBrush x:Key="AppBorder" Color="{StaticResource AppBorderColor}" />
+
+    <!-- GLOBAL OVERRIDES -->
+    <Style TargetType="Window">
+        <Setter Property="Background" Value="{DynamicResource AppBackground}" />
+        <Setter Property="Foreground" Value="{DynamicResource AppForeground}" />
+    </Style>
+
+    <Style TargetType="UserControl">
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Foreground" Value="{DynamicResource AppForeground}" />
+    </Style>
+
+    <Style TargetType="Border" x:Key="GlassCard">
+        <Setter Property="Background" Value="{DynamicResource CardBackground}" />
+        <Setter Property="Padding" Value="20"/>
+        <Setter Property="CornerRadius" Value="12"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource AppBorder}" />
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="Margin" Value="0 10"/>
+    </Style>
+
+    <!-- BUTTONS -->
+    <Style TargetType="Button">
+        <Setter Property="Foreground" Value="{DynamicResource AppForeground}" />
+        <Setter Property="Background" Value="White" />
+        <Setter Property="BorderBrush" Value="{DynamicResource AppBorder}" />
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="Padding" Value="8 4"/>
+        <Setter Property="Margin" Value="0 5"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="FontSize" Value="16"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="8"
+                            Padding="{TemplateBinding Padding}">
+                        <ContentPresenter HorizontalAlignment="Center"
+                                          VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="AccentButton" TargetType="Button" BasedOn="{StaticResource {x:Type Button}}">
+        <Setter Property="Background" Value="{DynamicResource AppAccent}" />
+        <Setter Property="Foreground" Value="White" />
+        <Setter Property="BorderBrush" Value="{DynamicResource AppAccent}" />
+    </Style>
+
+</ResourceDictionary>
